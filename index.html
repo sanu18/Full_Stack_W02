@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Biography Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    legend {
+      font-weight: bold;
+      border: 2px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 50%;
+      padding: 5px;
+      margin-top: 5px;
+      box-sizing: border-box;
+    }
+    input[type="checkbox"],
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    textarea {
+      resize: vertical;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Student Biography Form</h2>
+
+  <form action="#" method="post" enctype="multipart/form-data">
+    
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label>Gender:</label>
+      <input type="radio" id="male" name="gender" value="male">
+      <label for="male" style="display:inline;">Male</label>
+      <input type="radio" id="female" name="gender" value="female">
+      <label for="female" style="display:inline;">Female</label>
+      <input type="radio" id="other" name="gender" value="other">
+      <label for="other" style="display:inline;">Other</label>
+
+      <label for="cnic">CNIC:</label>
+      <input type="text" id="cnic" name="cnic" pattern="[0-9]{5}-[0-9]{7}-[0-9]{1}" placeholder="Format: xxxxx-xxxxxxx-x" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone">
+
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" rows="3"></textarea>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="">--Select Country--</option>
+        <option value="pakistan">Pakistan</option>
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="canada">Canada</option>
+      </select>
+    </fieldset>
+
+    <!-- Academic Information -->
+    <fieldset>
+      <legend>Academic Information</legend>
+
+      <label for="degree">Degree Program:</label>
+      <select id="degree" name="degree">
+        <option value="">--Select Program--</option>
+        <option value="bs_cs">BS Computer Science</option>
+        <option value="bs_se">BS Software Engineering</option>
+        <option value="bs_it">BS Information Technology</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label>Skills:</label>
+      <input type="checkbox" id="html" name="skills" value="HTML">
+      <label for="html" style="display:inline;">HTML</label>
+      <input type="checkbox" id="css" name="skills" value="CSS">
+      <label for="css" style="display:inline;">CSS</label>
+      <input type="checkbox" id="js" name="skills" value="JavaScript">
+      <label for="js" style="display:inline;">JavaScript</label>
+      <input type="checkbox" id="react" name="skills" value="React">
+      <label for="react" style="display:inline;">React</label>
+      <input type="checkbox" id="node" name="skills" value="Node.js">
+      <label for="node" style="display:inline;">Node.js</label>
+
+      <label for="profile">Upload Profile Picture:</label>
+      <input type="file" id="profile" name="profile" accept="image/*">
+
+      <label for="bio">Short Bio:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Write a short paragraph about yourself..."></textarea>
+
+    </fieldset>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+  </form>
+
+</body>
+</html>
